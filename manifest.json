@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "What's on steam",
+  "version": "0.1",
+  "description" : "Override the new tab to show new thing on steam",
+  "permissions": [
+    "https://api.steampowered.com/*"
+  ],
+  "background": {
+     "scripts": ["background.js"],
+     "persistent": false
+   },
+
+  "chrome_url_overrides" : {
+  "newtab": "whatsOnSteam.html"
+}
+}
