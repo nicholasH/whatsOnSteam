@@ -4,7 +4,8 @@
   "version": "0.1",
   "description" : "Override the new tab to show new thing on steam",
   "permissions": [
-    "https://api.steampowered.com/*"
+    "https://api.steampowered.com/*",
+    "https://store.steampowered.com/*"
   ],
   "background": {
      "scripts": ["background.js"],

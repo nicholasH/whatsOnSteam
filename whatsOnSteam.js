@@ -5,12 +5,17 @@ xhr.send();
 
 var result = xhr.responseText;
 var lastItemOnsteam = JSON.parse(result)["applist"]["apps"]["app"].slice(-1)[0];
-var name = lastItemOnsteam["name"]
-var id = lastItemOnsteam["appid"]
+var name = lastItemOnsteam["name"];
+var id = lastItemOnsteam["appid"];
+window.addEventListener('load', function () {
+var nameOfGame = document.getElementsByClassName('item_name')[0];
+var PicOfGame = document.getElementsByClassName('item_pic')[0];
 
+nameOfGame.innerHTML = name
 
-console.log(lastItemOnsteam)
-console.log(name)
-console.log(id)
-nameE = document.getElementsByClassName("item_name").value = "test";
-console.log(nameE)
+PicOfGame.innerHTML = ""
+console.log(nameOfGame);
+
+})
+
+window.location.replace("https://store.steampowered.com/app/"+id);
