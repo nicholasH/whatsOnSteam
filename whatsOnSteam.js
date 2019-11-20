@@ -7,15 +7,28 @@ var result = xhr.responseText;
 var lastItemOnsteam = JSON.parse(result)["applist"]["apps"]["app"].slice(-1)[0];
 var name = lastItemOnsteam["name"];
 var id = lastItemOnsteam["appid"];
-window.addEventListener('load', function () {
-var nameOfGame = document.getElementsByClassName('item_name')[0];
-var PicOfGame = document.getElementsByClassName('item_pic')[0];
 
-nameOfGame.innerHTML = name
+link = "https://store.steampowered.com/api/appdetails?appids="+id;
+xhr.open("GET", link, false);
+xhr.send();
+
+var result = xhr.responseText;
+var gameInfo = JSON.parse(result)[id]["data"];
+
+window.addEventListener('load', function () {
+var nameOfGame = document.getElementById('item_name');
+var picOfGame = document.getElementById('item_pic');
+var descriptionOfGame = document.getElementById('item_description');
+var linkOfGame = document.getElementById('item_storeLink');
+
+nameOfGame.innerHTML = name;
+picOfGame.src = gameInfo.header_image;
+descriptionOfGame.innerHTML =  gameInfo.short_description;
+linkOfGame.href = "https://store.steampowered.com/app/"+id;
+linkOfGame.innerHTML = "https://store.steampowered.com/app/"+id;
+
 
 PicOfGame.innerHTML = ""
 console.log(nameOfGame);
 
 })
-
-window.location.replace("https://store.steampowered.com/app/"+id);
