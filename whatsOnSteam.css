@@ -1,0 +1,54 @@
+.gameInfoDiv {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.item_name {
+  font-size: xx-large;
+  color: white;
+}
+
+.textBackground{
+  background-color:#556772;
+  opacity:.1;
+}
+
+.item_description {
+  width:18em;
+  margin: 0 auto;
+  background-color: rgba(54,48 ,67,0.30);
+  text-align:justify;
+  font-size: large;
+  color: white;
+}
+
+
+.screenShotsDiv img {
+  width:15%;
+  height:30%;
+  object-fit:cover;
+  padding: 10px;
+}
+
+.categoryAndGenra{
+  display: flex;
+  width: 70%
+}
+.categoryAndGenra p {
+
+  color: white;
+}
+
+.category{
+  flex: 0 0 50%;
+}
+.category{
+  flex: 1;
+}
+
+a {color:#67c1f5;}         /* Unvisited link  */
+a:visited {color:#67c1f5;} /* Visited link    */
+a:hover {color:#67c1f5;}   /* Mouse over link */
+a:active {color:#67c1f5;}  /* Selected link   */
